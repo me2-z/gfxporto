@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet - Thumbnail Designer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Three.js Canvas Background -->
+  <canvas id="bg"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">MEET.</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="btn-outline">Hire Me</a>
+    </div>
+  </nav>
+
+  <!-- Scrollable Content Layout -->
+  <main class="content-wrapper">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2 class="greeting">Hi.</h2>
+          <h1 class="title">I'm Meet &mdash;<br><span class="highlight">Thumbnail Designer</span></h1>
+          <p class="subtitle">I craft eye-catching visual hooks, turning clicks into core audiences with
+            performance-focused, cinematic designs.</p>
+          <div class="hero-actions">
+            <a href="#work" class="btn-primary">View My Work <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <div class="avatar-glow"></div>
+          <img src="./meet.png" alt="Meet Avatar" class="avatar-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & SKILLS SECTION -->
+    <section id="about" class="about">
+      <div class="section-header">
+        <span class="section-tag">01 // Profile</span>
+        <h2>Beyond The Canvas</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text glass-card">
+          <h3>Visual Architect</h3>
+          <p>With a deep understanding of YouTube algorithms and viewer psychology, I don't just make pretty pictures. I
+            engineer thumbnails built for high CTR.</p>
+          <p>My designs are optimized for every device, combining clean typography, dramatic lighting, and visceral
+            emotion to make your content undeniable.</p>
+        </div>
+        <div class="skills glass-card">
+          <h3>Arsenal</h3>
+          <ul class="skill-list">
+            <li><i class="ri-check-line"></i> Adobe Photoshop</li>
+            <li><i class="ri-check-line"></i> Refrence + Ai</li>
+            <li><i class="ri-check-line"></i> CTR Optimization</li>
+            <li><i class="ri-check-line"></i> A/B Testing</li>
+            <li><i class="ri-check-line"></i> Typography & Layout</li>
+            <li><i class="ri-check-line"></i> Color Theory Mastery</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="work" class="portfolio">
+      <div class="section-header">
+        <span class="section-tag">02 // Selected Work</span>
+        <h2>Digital Gallery</h2>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-src="./thumbnails/botlo field new.png">
+          <img src="./thumbnails/botlo field new.png" alt="Botlo Field New" />
+          <div class="item-overlay">
+            <h4>Battlefield #1</h4>
+            <span>View Full Size</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-src="./thumbnails/ha3.png">
+          <img src="./thumbnails/ha3.png" alt="HA3" />
+          <div class="item-overlay">
+            <h4>Apple Vs Meta</h4>
+            <span>View Full Size</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-src="./thumbnails/jadi got package.png">
+          <img src="./thumbnails/jadi got package.png" alt="Jadi Got Package" />
+          <div class="item-overlay">
+            <h4>You've Got Package! #2</h4>
+            <span>View Full Size</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-src="./thumbnails/jado rabdoo.png">
+          <img src="./thumbnails/jado rabdoo.png" alt="Jado Rabdoo" />
+          <div class="item-overlay">
+            <h4>You've Got Package! #2</h4>
+            <span>View Full Size</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-src="./thumbnails/venom.png">
+          <img src="./thumbnails/venom.png" alt="Venom" />
+          <div class="item-overlay">
+            <h4>Venom's Tech</h4>
+            <span>View Full Size</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section id="stats" class="stats">
+      <div class="stat-item glass-card">
+        <h2 class="counter" data-target="100">0</h2>
+        <span class="plus">+</span>
+        <p>Designs Mastered</p>
+      </div>
+      <div class="stat-item glass-card">
+        <h2 class="counter" data-target="3">0</h2>
+        <span class="plus">+</span>
+        <p>Premium Clients</p>
+      </div>
+      <div class="stat-item glass-card">
+        <h2 class="counter" data-target="1">0</h2>
+        <span class="plus">Yr</span>
+        <p>Industry Experience</p>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services">
+      <div class="section-header">
+        <span class="section-tag">03 // Offerings</span>
+        <h2>What I Do</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card glass-card">
+          <i class="ri-image-edit-line"></i>
+          <h3>YouTube Thumbnails</h3>
+          <p>Bespoke, high-converting thumbnail designs tailored to your channel's unique aesthetic and audience
+            demographics.</p>
+        </div>
+        <div class="service-card glass-card">
+          <i class="ri-cursor-fill"></i>
+          <h3>Clickbait Optimization</h3>
+          <p>Title and visual synergy to maximize click-through rates without breaking viewer trust. Hook them
+            instantly.</p>
+        </div>
+        <div class="service-card glass-card">
+          <i class="ri-vip-diamond-line"></i>
+          <h3>Branding Packs</h3>
+          <p>Complete visual identity overhauls including banners, lower thirds, and unified typography guidelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+      <div class="contact-box glass-card">
+        <div class="contact-info">
+          <h2>Let's build<br>something iconic.</h2>
+          <p>Ready to upgrade your clicks? Drop a message and let's discuss your next viral hit.</p>
+          <div class="social-box">
+            <div class="social-item" title="Discord Username">
+              <i class="ri-discord-fill"></i>
+              <span>lmaomeet</span>
+            </div>
+            <div class="social-divider"></div>
+            <a href="https://www.behance.net/meetzanzmera" target="_blank" class="social-item" title="Behance">
+              <i class="ri-behance-fill"></i>
+              <span>Behance</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2026 Meet Designs. All rights reserved.</p>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-img" src="" alt="Enlarged Thumbnail" />
+    </div>
+
+  </main>
+  <script type="module" src="/main.js"></script>
+  <script>
+    // Simple animated counters observer
+    const counters = document.querySelectorAll('.counter');
+    const speed = 50;
+
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const inc = target / speed;
+          if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(updateCount, 15);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.disconnect();
+        }
+      });
+    });
+
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) observer.observe(statsSection);
+
+    // Lightbox Functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    portfolioItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const src = item.getAttribute('data-src');
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      setTimeout(() => { lightboxImg.src = ''; }, 300); // clear after CSS transition
+      document.body.style.overflow = ''; // Restore scrolling
+    };
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      // Close lightbox if users tap on the background, not the image itself
+      // or if they tap the image according to user requirement ("also click on that again thumbnail then it will aslo close minimize it back")
+      closeLightbox();
+    });
+
+    // Also explicitly adding click to image even though the above covers it, for semantic clarity
+    lightboxImg.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent bubbling up
+      closeLightbox();     // close it
+    });
+  </script>
+</body>
+
+</html>
