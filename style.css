@@ -3,7 +3,7 @@
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.6);
   --accent: #555555;
-  --glass-bg: rgba(20, 20, 20, 0.4);
+  --glass-bg: rgba(20, 20, 20, 0.92);
   --glass-border: rgba(255, 255, 255, 0.05);
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /* Responsive typography base units */
@@ -78,7 +78,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  opacity: 0.6; /* Adjust for text readability */
+  opacity: 0; /* Initially hidden to prevent flash */
+  transition: opacity 1s ease-in-out;
+}
+
+#bg-video.video-ready {
+  opacity: 0.6; /* Fade in when ready */
 }
 
 .video-overlay {
@@ -204,16 +209,17 @@ body {
 /* Glass Card */
 .glass-card {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 2.5rem;
   transition: transform 0.3s ease-out, border-color 0.3s ease;
   transform-style: preserve-3d;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 .glass-card:hover {
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.15);
 }
 
 /* Hero Section */
@@ -399,12 +405,13 @@ section {
 .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 @media (min-width: 768px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -417,19 +424,26 @@ section {
 .portfolio-item {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: #111;
-  border-radius: 15px;
+  background: rgba(20, 20, 20, 0.92);
+  border-radius: 18px;
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transform-style: preserve-3d;
-  transition: transform 0.3s ease-out, border-color 0.3s ease;
+  transition: transform 0.3s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem;
 }
 .portfolio-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 14px;
   transition: transform 0.3s ease;
+}
+.portfolio-item:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 .portfolio-item:hover img {
   transform: scale(1.05) translateZ(20px);
@@ -578,7 +592,7 @@ section {
   align-items: center;
   text-align: center;
   gap: 2rem;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -609,12 +623,12 @@ section {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(20, 20, 20, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   margin-top: 2rem;
   transition: var(--transition);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
   width: 100%;
   max-width: 600px;
 }
@@ -629,10 +643,10 @@ section {
 }
 
 .social-box:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(30, 30, 30, 0.95);
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(255,255,255,0.05);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 .social-item {
   display: flex;
@@ -822,4 +836,70 @@ footer {
 .lightbox-close:hover {
   color: var(--text-secondary);
   transform: scale(1.1);
+}
+
+/* ====== Mobile Optimizations ====== */
+@media (max-width: 480px) {
+  .glass-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .portfolio-item {
+    padding: 0.35rem;
+    border-radius: 14px;
+  }
+  .portfolio-item img {
+    border-radius: 11px;
+  }
+
+  .portfolio-grid {
+    gap: 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .stat-item h2 {
+    font-size: 2.5rem;
+  }
+  .stat-item .plus {
+    font-size: 1.2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+  .service-card i {
+    font-size: 2rem;
+  }
+
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .social-box {
+    padding: 1.5rem;
+    border-radius: 18px;
+    gap: 1.5rem;
+  }
+  .social-item {
+    font-size: 1.2rem;
+  }
+  .social-item i {
+    font-size: 1.6rem;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .stats {
+    gap: 1.5rem;
+  }
 }

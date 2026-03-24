@@ -2,6 +2,20 @@
 // We use CSS 3D transforms for high performance and clean structure.
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Video Background Handling
+  const bgVideo = document.getElementById('bg-video');
+  if (bgVideo) {
+    // Check if video is already ready (for cached versions)
+    if (bgVideo.readyState >= 3) {
+      bgVideo.classList.add('video-ready');
+    } else {
+      // Otherwise wait for canplay event
+      bgVideo.addEventListener('canplay', () => {
+        bgVideo.classList.add('video-ready');
+      });
+    }
+  }
+
   // 1. Interaction for cards
   const cards = document.querySelectorAll('.glass-card, .portfolio-item, .service-card');
   
