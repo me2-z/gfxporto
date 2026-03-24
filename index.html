@@ -5,24 +5,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meet - Thumbnail Designer Portfolio</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+  <link rel="apple-touch-icon" href="/favicon.ico?v=1.1" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <!-- Three.js Canvas Background -->
-  <canvas id="bg"></canvas>
+  <!-- Video Background -->
+  <div class="video-bg-container">
+    <video autoplay muted loop playsinline id="bg-video" poster="/thumbnails/botlo field new.png">
+      <source src="/intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+  </div>
 
   <!-- Navigation -->
   <nav class="navbar">
     <div class="logo">MEET.</div>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#contact" class="btn-outline">Hire Me</a>
     </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 
   <!-- Scrollable Content Layout -->
@@ -32,7 +47,9 @@
     <section id="hero" class="hero">
       <div class="hero-content">
         <div class="hero-text">
-          <h2 class="greeting">Hi.</h2>
+          <div class="greeting-wrapper">
+            <h2 class="greeting">Hi.</h2>
+          </div>
           <h1 class="title">I'm Meet &mdash;<br><span class="highlight">Thumbnail Designer</span></h1>
           <p class="subtitle">I craft eye-catching visual hooks, turning clicks into core audiences with
             performance-focused, cinematic designs.</p>
@@ -42,7 +59,10 @@
         </div>
         <div class="hero-avatar">
           <div class="avatar-glow"></div>
-          <img src="/meet.png" alt="Meet Avatar" class="avatar-img" />
+          <picture>
+            <source srcset="/meet.png" media="(min-width: 1024px)">
+            <img src="/meet.png" alt="Meet Avatar" class="avatar-img" loading="eager" />
+          </picture>
         </div>
       </div>
     </section>
@@ -83,44 +103,62 @@
       </div>
       <div class="portfolio-grid">
         <div class="portfolio-item" data-src="/thumbnails/botlo field new.png">
-          <img src="/thumbnails/botlo field new.png" alt="Botlo Field New" />
+          <picture>
+            <source srcset="/thumbnails/botlo field new.png" media="(min-width: 768px)">
+            <img src="/thumbnails/botlo field new.png" alt="Botlo Field New" loading="lazy" />
+          </picture>
           <div class="item-overlay">
             <h4>Battlefield #1</h4>
             <span>View Full Size</span>
           </div>
         </div>
         <div class="portfolio-item" data-src="/thumbnails/ha3.png">
-          <img src="/thumbnails/ha3.png" alt="HA3" />
+          <picture>
+            <source srcset="/thumbnails/ha3.png" media="(min-width: 768px)">
+            <img src="/thumbnails/ha3.png" alt="HA3" loading="lazy" />
+          </picture>
           <div class="item-overlay">
             <h4>Apple Vs Meta</h4>
             <span>View Full Size</span>
           </div>
         </div>
         <div class="portfolio-item" data-src="/thumbnails/jadi got package.png">
-          <img src="/thumbnails/jadi got package.png" alt="Jadi Got Package" />
+          <picture>
+            <source srcset="/thumbnails/jadi got package.png" media="(min-width: 768px)">
+            <img src="/thumbnails/jadi got package.png" alt="Jadi Got Package" loading="lazy" />
+          </picture>
           <div class="item-overlay">
-            <h4>You've Got Package! #2</h4>
+            <h4>Jadi Got Package</h4>
             <span>View Full Size</span>
           </div>
         </div>
         <div class="portfolio-item" data-src="/thumbnails/jado rabdoo.png">
-          <img src="/thumbnails/jado rabdoo.png" alt="Jado Rabdoo" />
+          <picture>
+            <source srcset="/thumbnails/jado rabdoo.png" media="(min-width: 768px)">
+            <img src="/thumbnails/jado rabdoo.png" alt="Jado Rabdoo" loading="lazy" />
+          </picture>
           <div class="item-overlay">
-            <h4>You've Got Package! #2</h4>
+            <h4>Jado Rabdoo</h4>
             <span>View Full Size</span>
           </div>
         </div>
         <div class="portfolio-item" data-src="/thumbnails/venom.png">
-          <img src="/thumbnails/venom.png" alt="Venom" />
+          <picture>
+            <source srcset="/thumbnails/venom.png" media="(min-width: 768px)">
+            <img src="/thumbnails/venom.png" alt="Venom" loading="lazy" />
+          </picture>
           <div class="item-overlay">
-            <h4>Venom's Tech</h4>
+            <h4>Venom</h4>
             <span>View Full Size</span>
           </div>
         </div>
         <div class="portfolio-item" data-src="/thumbnails/hahg3.png">
-          <img src="/thumbnails/hahg3.png" alt="HAHG3" />
+          <picture>
+            <source srcset="/thumbnails/hahg3.png" media="(min-width: 768px)">
+            <img src="/thumbnails/hahg3.png" alt="HAHG3" loading="lazy" />
+          </picture>
           <div class="item-overlay">
-            <h4>Survival Horror</h4>
+            <h4>HAHG3</h4>
             <span>View Full Size</span>
           </div>
         </div>
@@ -180,12 +218,12 @@
           <h2>Let's build<br>something iconic.</h2>
           <p>Ready to upgrade your clicks? Drop a message and let's discuss your next viral hit.</p>
           <div class="social-box">
-            <div class="social-item" title="Discord Username">
+            <div class="social-item" title="Discord Username" aria-label="Discord: lmaomeet">
               <i class="ri-discord-fill"></i>
               <span>lmaomeet</span>
             </div>
             <div class="social-divider"></div>
-            <a href="https://www.behance.net/meetzanzmera" target="_blank" class="social-item" title="Behance">
+            <a href="https://www.behance.net/meetzanzmera" target="_blank" class="social-item" title="Behance" aria-label="Visit Meet's Behance profile">
               <i class="ri-behance-fill"></i>
               <span>Behance</span>
             </a>
@@ -208,6 +246,28 @@
   </main>
   <script type="module" src="/main.js"></script>
   <script>
+    // Mobile Navigation Logic
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navItems = navLinks.querySelectorAll('a');
+
+    const toggleMenu = () => {
+      const isActive = navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isActive);
+      document.body.style.overflow = isActive ? 'hidden' : ''; 
+    };
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          toggleMenu();
+        }
+      });
+    });
+
     // Simple animated counters observer
     const counters = document.querySelectorAll('.counter');
     const speed = 50;
@@ -229,17 +289,17 @@
       });
     }
 
-    const observer = new IntersectionObserver(entries => {
+    const observerCounters = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           animateCounters();
-          observer.disconnect();
+          observerCounters.disconnect();
         }
       });
     });
 
     const statsSection = document.querySelector('.stats');
-    if (statsSection) observer.observe(statsSection);
+    if (statsSection) observerCounters.observe(statsSection);
 
     // Lightbox Functionality
     const lightbox = document.getElementById('lightbox');
@@ -252,27 +312,21 @@
         const src = item.getAttribute('data-src');
         lightboxImg.src = src;
         lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        document.body.style.overflow = 'hidden'; 
       });
     });
 
     const closeLightbox = () => {
       lightbox.classList.remove('active');
-      setTimeout(() => { lightboxImg.src = ''; }, 300); // clear after CSS transition
-      document.body.style.overflow = ''; // Restore scrolling
+      setTimeout(() => { lightboxImg.src = ''; }, 300); 
+      document.body.style.overflow = ''; 
     };
 
     lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-      // Close lightbox if users tap on the background, not the image itself
-      // or if they tap the image according to user requirement ("also click on that again thumbnail then it will aslo close minimize it back")
-      closeLightbox();
-    });
-
-    // Also explicitly adding click to image even though the above covers it, for semantic clarity
+    lightbox.addEventListener('click', () => closeLightbox());
     lightboxImg.addEventListener('click', (e) => {
-      e.stopPropagation(); // prevent bubbling up
-      closeLightbox();     // close it
+      e.stopPropagation();
+      closeLightbox();
     });
   </script>
 </body>
