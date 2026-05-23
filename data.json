@@ -1,0 +1,79 @@
+{
+  "portfolios": [
+    {
+      "_id": "item_1",
+      "title": "Battlefield #1",
+      "image": "/botlo field new.png",
+      "category": "Gaming",
+      "description": "High impact gaming thumbnail",
+      "createdAt": "2026-05-19T00:00:00Z"
+    },
+    {
+      "_id": "item_2",
+      "title": "Apple Vs Meta",
+      "image": "/ha3.png",
+      "category": "Tech",
+      "description": "Tech commentary thumbnail",
+      "createdAt": "2026-05-19T00:00:01Z"
+    },
+    {
+      "_id": "item_3",
+      "title": "Jadi Got Package",
+      "image": "/jadi got package.png",
+      "category": "Horror",
+      "description": "Storytelling thumbnail",
+      "createdAt": "2026-05-19T00:00:02Z"
+    },
+    {
+      "_id": "item_4",
+      "title": "Jado Rabdoo",
+      "image": "/jado rabdoo.png",
+      "category": "Drama",
+      "description": "Dramatic lighting focus",
+      "createdAt": "2026-05-19T00:00:03Z"
+    },
+    {
+      "_id": "item_5",
+      "title": "Venom",
+      "image": "/venom.png",
+      "category": "Action",
+      "description": "Action packed thumbnail",
+      "createdAt": "2026-05-19T00:00:04Z"
+    },
+    {
+      "_id": "item_6",
+      "title": "HAHG3",
+      "image": "/hahg3.png",
+      "category": "Lifestyle",
+      "description": "Lifestyle vlog thumbnail",
+      "createdAt": "2026-05-19T00:00:05Z"
+    },
+    {
+      "_id": "mpcdbi4wsx4rfd8gz9k",
+      "title": "Triggered Insaan",
+      "image": "/uploads/portfolio/1779179131728-rabdi-trigu.png",
+      "category": "Gaming | Cinematic",
+      "description": "Triggered Insaan Setup Room Thumbnail",
+      "createdAt": "2026-05-19T08:25:34.352Z"
+    },
+    {
+      "_id": "mpce05z9ho06s0yyw7d",
+      "title": "Mr Beast Style Thumbnail #1",
+      "image": "/uploads/cinematic/1779180282524-mr-beast-1.png",
+      "category": "Cinematic",
+      "description": "",
+      "createdAt": "2026-05-19T08:44:44.997Z"
+    }
+  ],
+  "transformations": [
+    {
+      "_id": "trans_1",
+      "title": "Cinematic Colour Grading & Composition",
+      "description": "Before: Low impact, weaker focal hierarchy, flat colour palette.\nAfter: Cinematic tone, tighter framing, dramatically higher click-pull.",
+      "beforeImage": "/before1.png",
+      "afterImage": "/after1.png",
+      "createdAt": "2026-05-19T00:00:00Z"
+    }
+  ],
+  "settings": {}
+}
